@@ -6,6 +6,7 @@ public class SearchInRotatedSortedArray {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		
 		Scanner sc = new Scanner (System.in);
 		int n = sc.nextInt();
 		int[] arr = new int[n];
@@ -23,12 +24,12 @@ public class SearchInRotatedSortedArray {
 
 	private static int searchInRotatedArray(int[] arr, int x) {
 	
-		 int min = checkArrayRotation(arr);
-			int first = binarySearch(arr, x, 0, min-1);
-			int sec = binarySearch(arr, x, min, arr.length-1);
+		int min = checkArrayRotation(arr);
+		 int first = binarySearch(arr, x, 0, min-1);
+		 
+		int sec = binarySearch(arr, x, min, arr.length-1);
 			
 			return Math.max(first, sec);
-		
 		
 	}
 	  
